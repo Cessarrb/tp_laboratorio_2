@@ -46,19 +46,19 @@ namespace Entidades
 
         public static double operator +(Operando num1, Operando num2)
         {
-            double retorno = num1 + num2;
+            double retorno = num1.numero + num2.numero;
 
             return retorno;
         }
         public static double operator -(Operando num1, Operando num2)
         {
-            double retorno = num1 - num2;
+            double retorno = num1.numero - num2.numero;
 
             return retorno;
         }
         public static double operator *(Operando num1, Operando num2)
         {
-            double retorno = num1 * num2;
+            double retorno = num1.numero * num2.numero;
 
             return retorno;
         }
@@ -68,7 +68,7 @@ namespace Entidades
 
             if (num2.numero != 0)
             {
-                retorno = num1 / num2;
+                retorno = num1.numero / num2.numero;
             }
 
             return retorno;

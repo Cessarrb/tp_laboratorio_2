@@ -16,3 +16,7 @@ C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FormCalculadora.resources
+C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.dll
+C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\Entidades.pdb
+C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.CopyComplete
+C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.Properties.Resources.resources

@@ -27,7 +27,7 @@ namespace MiCalculadora
 
         public void Limpiar()
         {
-            this.BoxLista.Items.Clear();
+            this.listOperaciones.Items.Clear();
             this.txtNumeroUno.Text = "";
             this.txtNumeroDos.Text = "";
             this.lblResultado.Text = "";
@@ -41,8 +41,15 @@ namespace MiCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = Operar(this.txtNumeroUno.Text, this.txtNumeroDos.Text, this.BoxOperador.Text).ToString();
-            listBox1.Text = Operar(this.txtNumeroUno.Text, this.txtNumeroDos.Text, this.BoxOperador.Text).ToString();
+            if(BoxOperador.Text != "")
+            {
+                lblResultado.Text = Operar(this.txtNumeroUno.Text, this.txtNumeroDos.Text, this.BoxOperador.Text).ToString();
+                listOperaciones.Items.Add($"{txtNumeroUno.Text} {BoxOperador.Text} {txtNumeroDos.Text} = {lblResultado.Text}");
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un operador", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -52,19 +59,14 @@ namespace MiCalculadora
 
         private static double Operar(string numero1, string numero2, string operador)
         {
-            double resultado;
+            double resultado = 0;
 
             Operando operando1 = new Operando(numero1);
             Operando operando2 = new Operando(numero2);
-
+            
             resultado = Calculadora.Operar(operando1, operando2, char.Parse(operador));
 
             return resultado;
-        }
-
-        private void lblResultado_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

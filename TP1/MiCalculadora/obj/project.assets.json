@@ -10,10 +10,7 @@
         },
         "runtime": {
           "bin/placeholder/Entidades.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
+        }
       }
     }
   },
