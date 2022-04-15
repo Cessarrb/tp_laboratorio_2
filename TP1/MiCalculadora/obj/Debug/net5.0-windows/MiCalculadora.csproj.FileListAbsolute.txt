@@ -6,7 +6,6 @@ C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\ref\MiCalculadora.dll
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\bin\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.AssemblyReference.cache
-C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.S.resources
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.csproj.GenerateResource.cache
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.AssemblyInfoInputs.cache
@@ -16,3 +15,4 @@ C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\ref\MiCalculadora.dll
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.pdb
 C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.genruntimeconfig.cache
+C:\Users\Cesar\source\repos\tp_laboratorio_2\TP1\MiCalculadora\obj\Debug\net5.0-windows\MiCalculadora.FormCalculadora.resources

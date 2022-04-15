@@ -1,7 +1,7 @@
 ﻿
 namespace MiCalculadora
 {
-    partial class S
+    partial class FormCalculadora
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,38 +38,42 @@ namespace MiCalculadora
             this.txtNumeroUno = new System.Windows.Forms.TextBox();
             this.txtNumeroDos = new System.Windows.Forms.TextBox();
             this.BoxOperador = new System.Windows.Forms.ComboBox();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOperar
             // 
-            this.btnOperar.Location = new System.Drawing.Point(12, 142);
+            this.btnOperar.Location = new System.Drawing.Point(12, 128);
             this.btnOperar.Name = "btnOperar";
-            this.btnOperar.Size = new System.Drawing.Size(131, 44);
+            this.btnOperar.Size = new System.Drawing.Size(152, 44);
             this.btnOperar.TabIndex = 0;
             this.btnOperar.Text = "Operar";
             this.btnOperar.UseVisualStyleBackColor = true;
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(179, 142);
+            this.btnLimpiar.Location = new System.Drawing.Point(170, 128);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(131, 44);
+            this.btnLimpiar.Size = new System.Drawing.Size(152, 44);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(349, 142);
+            this.btnCerrar.Location = new System.Drawing.Point(328, 128);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(131, 44);
+            this.btnCerrar.Size = new System.Drawing.Size(152, 44);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnConvertirABinario
             // 
-            this.btnConvertirABinario.Location = new System.Drawing.Point(12, 224);
+            this.btnConvertirABinario.Location = new System.Drawing.Point(12, 210);
             this.btnConvertirABinario.Name = "btnConvertirABinario";
             this.btnConvertirABinario.Size = new System.Drawing.Size(231, 44);
             this.btnConvertirABinario.TabIndex = 3;
@@ -78,7 +82,7 @@ namespace MiCalculadora
             // 
             // btnConvertirABDecimal
             // 
-            this.btnConvertirABDecimal.Location = new System.Drawing.Point(249, 224);
+            this.btnConvertirABDecimal.Location = new System.Drawing.Point(249, 210);
             this.btnConvertirABDecimal.Name = "btnConvertirABDecimal";
             this.btnConvertirABDecimal.Size = new System.Drawing.Size(231, 44);
             this.btnConvertirABDecimal.TabIndex = 4;
@@ -89,46 +93,60 @@ namespace MiCalculadora
             // 
             this.BoxLista.FormattingEnabled = true;
             this.BoxLista.ItemHeight = 15;
-            this.BoxLista.Location = new System.Drawing.Point(495, 12);
+            this.BoxLista.Location = new System.Drawing.Point(486, 12);
             this.BoxLista.Name = "BoxLista";
-            this.BoxLista.Size = new System.Drawing.Size(211, 259);
+            this.BoxLista.Size = new System.Drawing.Size(228, 259);
             this.BoxLista.TabIndex = 5;
             // 
             // txtNumeroUno
             // 
-            this.txtNumeroUno.Location = new System.Drawing.Point(27, 47);
+            this.txtNumeroUno.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNumeroUno.Location = new System.Drawing.Point(12, 60);
             this.txtNumeroUno.Name = "txtNumeroUno";
-            this.txtNumeroUno.Size = new System.Drawing.Size(116, 23);
+            this.txtNumeroUno.Size = new System.Drawing.Size(131, 39);
             this.txtNumeroUno.TabIndex = 6;
             // 
             // txtNumeroDos
             // 
-            this.txtNumeroDos.Location = new System.Drawing.Point(349, 47);
+            this.txtNumeroDos.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNumeroDos.Location = new System.Drawing.Point(349, 60);
             this.txtNumeroDos.Name = "txtNumeroDos";
-            this.txtNumeroDos.Size = new System.Drawing.Size(116, 23);
+            this.txtNumeroDos.Size = new System.Drawing.Size(131, 39);
             this.txtNumeroDos.TabIndex = 7;
             // 
             // BoxOperador
             // 
             this.BoxOperador.DisplayMember = "7";
+            this.BoxOperador.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BoxOperador.FormattingEnabled = true;
             this.BoxOperador.Items.AddRange(new object[] {
-            "",
             "*",
             "/",
             "+",
             "-"});
-            this.BoxOperador.Location = new System.Drawing.Point(179, 47);
+            this.BoxOperador.Location = new System.Drawing.Point(192, 59);
             this.BoxOperador.Name = "BoxOperador";
-            this.BoxOperador.Size = new System.Drawing.Size(131, 23);
+            this.BoxOperador.Size = new System.Drawing.Size(110, 40);
             this.BoxOperador.TabIndex = 8;
             this.BoxOperador.ValueMember = "/";
             // 
-            // S
+            // lblResultado
+            // 
+            this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResultado.Location = new System.Drawing.Point(179, 12);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(301, 42);
+            this.lblResultado.TabIndex = 9;
+            this.lblResultado.Text = "0";
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
+            // 
+            // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 280);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.BoxOperador);
             this.Controls.Add(this.txtNumeroDos);
             this.Controls.Add(this.txtNumeroUno);
@@ -138,8 +156,9 @@ namespace MiCalculadora
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
-            this.Name = "S";
+            this.Name = "FormCalculadora";
             this.Text = "Calculadora de Cesar Algañaras del curso 2°D";
+            this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +176,7 @@ namespace MiCalculadora
         private System.Windows.Forms.TextBox txtNumeroDos;
         private System.Windows.Forms.ComboBox BoxOperador;
         private System.Windows.Forms.ListBox BoxLista;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
 
