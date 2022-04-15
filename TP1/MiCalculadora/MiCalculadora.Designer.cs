@@ -32,11 +32,11 @@ namespace MiCalculadora
             this.btnOperar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnConverBinario = new System.Windows.Forms.Button();
-            this.btnConverDecimal = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.txtOperandoUno = new System.Windows.Forms.TextBox();
-            this.txtOperandoDos = new System.Windows.Forms.TextBox();
+            this.btnConvertirABinario = new System.Windows.Forms.Button();
+            this.btnConvertirABDecimal = new System.Windows.Forms.Button();
+            this.BoxLista = new System.Windows.Forms.ListBox();
+            this.txtNumeroUno = new System.Windows.Forms.TextBox();
+            this.txtNumeroDos = new System.Windows.Forms.TextBox();
             this.BoxOperador = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -67,56 +67,57 @@ namespace MiCalculadora
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             // 
-            // btnConverBinario
+            // btnConvertirABinario
             // 
-            this.btnConverBinario.Location = new System.Drawing.Point(12, 224);
-            this.btnConverBinario.Name = "btnConverBinario";
-            this.btnConverBinario.Size = new System.Drawing.Size(231, 44);
-            this.btnConverBinario.TabIndex = 3;
-            this.btnConverBinario.Text = "Convertir a Binario";
-            this.btnConverBinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Location = new System.Drawing.Point(12, 224);
+            this.btnConvertirABinario.Name = "btnConvertirABinario";
+            this.btnConvertirABinario.Size = new System.Drawing.Size(231, 44);
+            this.btnConvertirABinario.TabIndex = 3;
+            this.btnConvertirABinario.Text = "Convertir a Binario";
+            this.btnConvertirABinario.UseVisualStyleBackColor = true;
             // 
-            // btnConverDecimal
+            // btnConvertirABDecimal
             // 
-            this.btnConverDecimal.Location = new System.Drawing.Point(249, 224);
-            this.btnConverDecimal.Name = "btnConverDecimal";
-            this.btnConverDecimal.Size = new System.Drawing.Size(231, 44);
-            this.btnConverDecimal.TabIndex = 4;
-            this.btnConverDecimal.Text = "Convertir a Decimal";
-            this.btnConverDecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirABDecimal.Location = new System.Drawing.Point(249, 224);
+            this.btnConvertirABDecimal.Name = "btnConvertirABDecimal";
+            this.btnConvertirABDecimal.Size = new System.Drawing.Size(231, 44);
+            this.btnConvertirABDecimal.TabIndex = 4;
+            this.btnConvertirABDecimal.Text = "Convertir a Decimal";
+            this.btnConvertirABDecimal.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // BoxLista
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(495, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(211, 259);
-            this.listBox1.TabIndex = 5;
+            this.BoxLista.FormattingEnabled = true;
+            this.BoxLista.ItemHeight = 15;
+            this.BoxLista.Location = new System.Drawing.Point(495, 12);
+            this.BoxLista.Name = "BoxLista";
+            this.BoxLista.Size = new System.Drawing.Size(211, 259);
+            this.BoxLista.TabIndex = 5;
             // 
-            // txtOperandoUno
+            // txtNumeroUno
             // 
-            this.txtOperandoUno.Location = new System.Drawing.Point(27, 47);
-            this.txtOperandoUno.Name = "txtOperandoUno";
-            this.txtOperandoUno.Size = new System.Drawing.Size(116, 23);
-            this.txtOperandoUno.TabIndex = 6;
+            this.txtNumeroUno.Location = new System.Drawing.Point(27, 47);
+            this.txtNumeroUno.Name = "txtNumeroUno";
+            this.txtNumeroUno.Size = new System.Drawing.Size(116, 23);
+            this.txtNumeroUno.TabIndex = 6;
             // 
-            // txtOperandoDos
+            // txtNumeroDos
             // 
-            this.txtOperandoDos.Location = new System.Drawing.Point(349, 47);
-            this.txtOperandoDos.Name = "txtOperandoDos";
-            this.txtOperandoDos.Size = new System.Drawing.Size(116, 23);
-            this.txtOperandoDos.TabIndex = 7;
+            this.txtNumeroDos.Location = new System.Drawing.Point(349, 47);
+            this.txtNumeroDos.Name = "txtNumeroDos";
+            this.txtNumeroDos.Size = new System.Drawing.Size(116, 23);
+            this.txtNumeroDos.TabIndex = 7;
             // 
             // BoxOperador
             // 
             this.BoxOperador.DisplayMember = "7";
             this.BoxOperador.FormattingEnabled = true;
             this.BoxOperador.Items.AddRange(new object[] {
-            "/",
+            "",
             "*",
-            "-",
-            "+"});
+            "/",
+            "+",
+            "-"});
             this.BoxOperador.Location = new System.Drawing.Point(179, 47);
             this.BoxOperador.Name = "BoxOperador";
             this.BoxOperador.Size = new System.Drawing.Size(131, 23);
@@ -129,11 +130,11 @@ namespace MiCalculadora
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 280);
             this.Controls.Add(this.BoxOperador);
-            this.Controls.Add(this.txtOperandoDos);
-            this.Controls.Add(this.txtOperandoUno);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.btnConverDecimal);
-            this.Controls.Add(this.btnConverBinario);
+            this.Controls.Add(this.txtNumeroDos);
+            this.Controls.Add(this.txtNumeroUno);
+            this.Controls.Add(this.BoxLista);
+            this.Controls.Add(this.btnConvertirABDecimal);
+            this.Controls.Add(this.btnConvertirABinario);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
@@ -149,12 +150,13 @@ namespace MiCalculadora
         private System.Windows.Forms.Button btnOperar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnConverBinario;
-        private System.Windows.Forms.Button btnConverDecimal;
+        private System.Windows.Forms.Button btnConvertirABinario;
+        private System.Windows.Forms.Button btnConvertirABDecimal;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox txtOperandoUno;
-        private System.Windows.Forms.TextBox txtOperandoDos;
+        private System.Windows.Forms.TextBox txtNumeroUno;
+        private System.Windows.Forms.TextBox txtNumeroDos;
         private System.Windows.Forms.ComboBox BoxOperador;
+        private System.Windows.Forms.ListBox BoxLista;
     }
 }
 
