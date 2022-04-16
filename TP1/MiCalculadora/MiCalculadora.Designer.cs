@@ -123,10 +123,12 @@ namespace MiCalculadora
             // 
             this.BoxOperador.BackColor = System.Drawing.Color.White;
             this.BoxOperador.DisplayMember = "7";
+            this.BoxOperador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BoxOperador.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BoxOperador.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BoxOperador.FormattingEnabled = true;
             this.BoxOperador.Items.AddRange(new object[] {
+            "",
             "*",
             "/",
             "+",

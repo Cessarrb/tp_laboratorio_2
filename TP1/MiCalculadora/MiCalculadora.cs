@@ -41,14 +41,25 @@ namespace MiCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            if(BoxOperador.Text != "")
+            if (BoxOperador.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un operador", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                return;
+            }
+            if(double.TryParse(txtNumeroUno.Text, out double num1) && double.TryParse(txtNumeroDos.Text, out double num2))
             {
                 lblResultado.Text = Operar(this.txtNumeroUno.Text, this.txtNumeroDos.Text, this.BoxOperador.Text).ToString();
                 listOperaciones.Items.Add($"{txtNumeroUno.Text} {BoxOperador.Text} {txtNumeroDos.Text} = {lblResultado.Text}");
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un operador", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                MessageBox.Show("Debe ingresar numeros", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                return;
+            }
+            if(this.txtNumeroDos.Text == "0" && BoxOperador.Text == "/")
+            {
+                MessageBox.Show("No se puede dividir por 0", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                return;
             }
         }
 
