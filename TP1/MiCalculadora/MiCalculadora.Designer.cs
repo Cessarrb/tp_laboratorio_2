@@ -79,6 +79,7 @@ namespace MiCalculadora
             this.btnConvertirABinario.TabIndex = 3;
             this.btnConvertirABinario.Text = "Convertir a Binario";
             this.btnConvertirABinario.UseVisualStyleBackColor = true;
+            this.btnConvertirABinario.Click += new System.EventHandler(this.btnConvertirABinario_Click);
             // 
             // btnConvertirABDecimal
             // 
@@ -88,6 +89,7 @@ namespace MiCalculadora
             this.btnConvertirABDecimal.TabIndex = 4;
             this.btnConvertirABDecimal.Text = "Convertir a Decimal";
             this.btnConvertirABDecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirABDecimal.Click += new System.EventHandler(this.btnConvertirABDecimal_Click);
             // 
             // listOperaciones
             // 
@@ -125,7 +127,6 @@ namespace MiCalculadora
             this.BoxOperador.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BoxOperador.FormattingEnabled = true;
             this.BoxOperador.Items.AddRange(new object[] {
-            "",
             "*",
             "/",
             "+",
@@ -140,9 +141,9 @@ namespace MiCalculadora
             // 
             this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblResultado.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblResultado.Location = new System.Drawing.Point(179, 12);
+            this.lblResultado.Location = new System.Drawing.Point(12, 12);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(301, 42);
+            this.lblResultado.Size = new System.Drawing.Size(468, 42);
             this.lblResultado.TabIndex = 9;
             this.lblResultado.Text = "0";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -162,8 +163,12 @@ namespace MiCalculadora
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormCalculadora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Cesar Algañaras del curso 2°D";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCalculadora_FormClosing);
             this.Load += new System.EventHandler(this.FormCalculadora_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

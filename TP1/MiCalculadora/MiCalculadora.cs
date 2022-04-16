@@ -68,5 +68,29 @@ namespace MiCalculadora
 
             return resultado;
         }
+
+        private void btnConvertirABinario_Click(object sender, EventArgs e)
+        {
+            Operando resultado = new Operando();
+            string numeroBinario = resultado.DecimalABinario(lblResultado.Text);
+            lblResultado.Text = numeroBinario;
+            listOperaciones.Items.Add($"{numeroBinario}");
+        }
+
+        private void btnConvertirABDecimal_Click(object sender, EventArgs e)
+        {
+            Operando resultado = new Operando();
+            string numeroDecimal= resultado.BinarioADecimal(lblResultado.Text);
+            lblResultado.Text = numeroDecimal;
+            listOperaciones.Items.Add($"{numeroDecimal}");
+        }
+
+        private void FormCalculadora_FormClosing(object sender, FormClosingEventArgs formClose)
+        {
+            if (MessageBox.Show("¿Seguro de querer salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                formClose.Cancel = true;
+            }
+        }
     }
 }

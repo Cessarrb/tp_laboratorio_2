@@ -31,9 +31,9 @@ namespace Entidades
             return resultado;
         }
 
-        public static char ValidarOperador(char operador)
+        private static char ValidarOperador(char operador)
         {
-            if (operador == '+' || operador == '-' || operador == '*' || operador == '/')
+            if (operador == '-' || operador == '+' || operador == '/' || operador == '*')
             {
                 return operador;
             }
