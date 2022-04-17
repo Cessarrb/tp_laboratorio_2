@@ -46,6 +46,11 @@ namespace MiCalculadora
                 MessageBox.Show("Debe seleccionar un operador", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
             }
+            if(this.txtNumeroDos.Text == "0" && BoxOperador.Text == "/")
+            {
+                MessageBox.Show("No se puede dividir por 0", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                return;
+            }
             if(double.TryParse(txtNumeroUno.Text, out double num1) && double.TryParse(txtNumeroDos.Text, out double num2))
             {
                 lblResultado.Text = Operar(this.txtNumeroUno.Text, this.txtNumeroDos.Text, this.BoxOperador.Text).ToString();
@@ -53,12 +58,7 @@ namespace MiCalculadora
             }
             else
             {
-                MessageBox.Show("Debe ingresar numeros", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
-                return;
-            }
-            if(this.txtNumeroDos.Text == "0" && BoxOperador.Text == "/")
-            {
-                MessageBox.Show("No se puede dividir por 0", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                MessageBox.Show("Debe ingresar numeros en los dos campos para operar", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
             }
         }
