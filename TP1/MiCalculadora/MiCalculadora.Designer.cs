@@ -167,6 +167,7 @@ namespace MiCalculadora
             this.Controls.Add(this.btnOperar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Cesar Algañaras del curso 2°D";

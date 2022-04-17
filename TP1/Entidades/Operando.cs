@@ -15,10 +15,10 @@ namespace Entidades
             this.numero = 0;
         }
 
-        public Operando(double numero)
-        {
-            this.numero = numero;
-        }
+        //public Operando(double numero)
+        //{
+        //    this.numero = numero;
+        //}
 
         public Operando(string strNumero)
         {
