@@ -9,7 +9,7 @@ namespace Entidades
     /// <summary>
     /// No podrá tener clases heredadas.
     /// </summary>
-    sealed class Taller
+    public sealed class Taller
     {
         private List<Vehiculo> vehiculos;
         private int espacioDisponible;
@@ -21,7 +21,7 @@ namespace Entidades
         #region "Constructores"
         private Taller()
         {
-            this.vehiculos = new List<Vehiculo>();
+            vehiculos = new List<Vehiculo>();
         }
         public Taller(int espacioDisponible)
         {
@@ -49,7 +49,7 @@ namespace Entidades
         /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
         /// <returns></returns>
-        public string Listar(Taller taller, ETipo tipo)
+        public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -87,13 +87,16 @@ namespace Entidades
         /// <returns></returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
-            foreach (Vehiculo v in taller.vehiculos)
+            if(taller.espacioDisponible > taller.vehiculos.Count)
             {
-                if (v == vehiculo)
-                    return taller;
-            }
+                foreach (Vehiculo v in taller.vehiculos)
+                {
+                    if (v == vehiculo)
+                        return taller;
+                }
 
-            taller.vehiculos.Add(vehiculo);
+                taller.vehiculos.Add(vehiculo);
+            }
             return taller;
         }
         /// <summary>
