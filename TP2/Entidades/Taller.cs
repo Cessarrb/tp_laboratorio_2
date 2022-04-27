@@ -21,9 +21,10 @@ namespace Entidades
         #region "Constructores"
         private Taller()
         {
-            vehiculos = new List<Vehiculo>();
+            this.vehiculos = new List<Vehiculo>();
         }
         public Taller(int espacioDisponible)
+            :this()
         {
             this.espacioDisponible = espacioDisponible;
         }
