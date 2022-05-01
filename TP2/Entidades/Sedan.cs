@@ -10,10 +10,18 @@ namespace Entidades
 {
     public class Sedan : Vehiculo
     {
+        /// <summary>
+        /// Enumerado del tipo de automovil segun la cantidad de puertas
+        /// </summary>
         public enum ETipo { CuatroPuertas, CincoPuertas }
         private ETipo tipo;
 
-
+        /// <summary>
+        /// Inicializa una nueva instacnai de <see cref="Sedan"/>
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color)
             : base(chasis, marca, color)
         {
@@ -27,6 +35,7 @@ namespace Entidades
         /// <param name="marca"></param>
         /// <param name="chasis"></param>
         /// <param name="color"></param>
+        /// <param name="tipo"></param>
         public Sedan(EMarca marca, string chasis, ConsoleColor color, ETipo tipo)
             : base(chasis, marca, color)
         {
@@ -34,7 +43,7 @@ namespace Entidades
         }
 
         /// <summary>
-        /// Sedan son 'Mediano'
+        /// devuelve el tamaño de los automoviles, Sedan son 'Mediano'
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -44,6 +53,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos del automovil
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

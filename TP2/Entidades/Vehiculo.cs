@@ -11,10 +11,17 @@ namespace Entidades
     /// </summary>
     public abstract class Vehiculo
     {
+        /// <summary>
+        /// Enumerado de las marcas de vehiculo
+        /// </summary>
         public enum EMarca
         {
             Chevrolet, Ford, Renault, Toyota, BMW, Honda, HarleyDavidson
         }
+
+        /// <summary>
+        /// Enumtado de tamaños del vehiculo
+        /// </summary>
         public enum ETamanio
         {
             Chico, Mediano, Grande
@@ -25,6 +32,12 @@ namespace Entidades
         private string chasis;
         private ConsoleColor color;
 
+        /// <summary>
+        /// Constructor base
+        /// </summary>
+        /// <param name="chasis"></param>
+        /// <param name="marca"></param>
+        /// <param name="color"></param>
         protected Vehiculo(string chasis, EMarca marca, ConsoleColor color)
         {
             this.chasis = chasis;
@@ -40,19 +53,23 @@ namespace Entidades
         /// <summary>
         /// Publica todos los datos del Vehiculo.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>listado del vehiculo</returns>
          public virtual string Mostrar()
         {
-            return (string)this; //utilizo el casteo para devolver el stringbuilkder con los datos
+            return (string)this; //utilizo el casteo para devolver el stringbuilder con los datos
         }
 
+        /// <summary>
+        /// Castea los datos de un vehiculo a una cadena de caracteres
+        /// </summary>
+        /// <param name="p"></param>
         public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine(string.Format("CHASIS: {0}\r\n", p.chasis.ToString()));
-            sb.AppendLine(string.Format("MARCA : {0}\r\n", p.marca.ToString()));
-            sb.AppendLine(string.Format("COLOR : {0}\r\n", p.color.ToString()));
+            sb.AppendLine(string.Format("CHASIS: {0}\r", p.chasis.ToString()));
+            sb.AppendLine(string.Format("MARCA : {0}\r", p.marca.ToString()));
+            sb.AppendLine(string.Format("COLOR : {0}\r", p.color.ToString()));
             sb.AppendLine("---------------------");
 
             return sb.ToString();
@@ -63,7 +80,7 @@ namespace Entidades
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <returns>True si son iguales, false si son distintos</returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
             return (v1.chasis == v2.chasis);
@@ -73,7 +90,7 @@ namespace Entidades
         /// </summary>
         /// <param name="v1"></param>
         /// <param name="v2"></param>
-        /// <returns></returns>
+        /// <returns>True si son distintos, false si son iguales</returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
             return (v1.chasis == v2.chasis);

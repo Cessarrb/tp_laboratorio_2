@@ -11,18 +11,31 @@ namespace Entidades
     /// </summary>
     public sealed class Taller
     {
+        //ATRIVUTOS
         private List<Vehiculo> vehiculos;
         private int espacioDisponible;
+
+        /// <summary>
+        /// Enumerado del tipo de Vehiculo
+        /// </summary>
         public enum ETipo
         {
             Ciclomotor, Sedan, SUV, Todos
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Inicializa una instancia de Taller
+        /// </summary>
         private Taller()
         {
             this.vehiculos = new List<Vehiculo>();
         }
+
+        /// <summary>
+        /// Inicializa una instancia de taller, asignandole el espacio disponible
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Taller(int espacioDisponible)
             :this()
         {
@@ -34,7 +47,7 @@ namespace Entidades
         /// <summary>
         /// Muestro el estacionamiento y TODOS los vehículos
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Listado de todos los vehiculos</returns>
         public override string ToString()
         {
             return Listar(this, ETipo.Todos);
@@ -49,7 +62,7 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
-        /// <returns></returns>
+        /// <returns>Listado de todos los vehiculos requeridos</returns>
         public static string Listar(Taller taller, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
@@ -85,7 +98,7 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Objeto donde se agregará el elemento</param>
         /// <param name="vehiculo">Objeto a agregar</param>
-        /// <returns></returns>
+        /// <returns>Taller con el nuevo vehiculo agregado de ser posible</returns>
         public static Taller operator +(Taller taller, Vehiculo vehiculo)
         {
             if(taller.espacioDisponible > taller.vehiculos.Count)
@@ -105,7 +118,7 @@ namespace Entidades
         /// </summary>
         /// <param name="taller">Objeto donde se quitará el elemento</param>
         /// <param name="vehiculo">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns>Taller con el vehiculo eliminado</returns>
         public static Taller operator -(Taller taller, Vehiculo vehiculo)
         {
             foreach (Vehiculo v in taller.vehiculos)

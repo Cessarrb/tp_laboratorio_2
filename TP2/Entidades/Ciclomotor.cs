@@ -8,13 +8,18 @@ namespace Entidades
 {
     public class Ciclomotor : Vehiculo
     {
+        /// <summary>
+        /// Inicializa una nueva isntancia de <see cref="Ciclomotor"/>
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Ciclomotor(EMarca marca, string chasis, ConsoleColor color) : base(chasis, marca, color)
         {
-            
         }
         
         /// <summary>
-        /// Ciclomotor son 'Chico'
+        /// Devuelve el  tamañao de las motos, Ciclomotor son 'Chico'
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -23,7 +28,10 @@ namespace Entidades
                 return ETamanio.Chico;
             }
         }
-
+        /// <summary>
+        /// Muestra los datos de la moto
+        /// </summary>
+        /// <returns>Listado del vehiculo <see cref="Ciclomotor"/></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

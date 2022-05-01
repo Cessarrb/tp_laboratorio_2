@@ -8,12 +8,18 @@ namespace Entidades
 {
     public class Suv : Vehiculo
     {
+        /// <summary>
+        /// Inicializar una nueva instancia de <see cref="Suv"/>
+        /// </summary>
+        /// <param name="marca"></param>
+        /// <param name="chasis"></param>
+        /// <param name="color"></param>
         public Suv(EMarca marca, string chasis, ConsoleColor color)
             : base(chasis, marca, color)
         {
         }
         /// <summary>
-        /// SUV son 'Grande'
+        /// Devuelve el tamanño de las camionetas, SUV son 'Grande'
         /// </summary>
         protected override ETamanio Tamanio
         {
@@ -23,6 +29,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Muestra los datos de la camioneta
+        /// </summary>
+        /// <returns>Listado del vehiculo <see cref="Suv"/></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
